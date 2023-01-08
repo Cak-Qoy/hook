@@ -17,17 +17,17 @@ const ComponentNews = () => {
     // setData(berita.articles);
   };
 
-  console.log(data);
+  // console.log(data);
   return (
-    <div class="container-fluid">
-      <div class="row">
-      {data.map((d) => (
-        <div class="card col-md-3">
-          <img src={d.urlToImage} class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">{d.title}</h5>
-            <p class="card-text">{d.description}</p>
-            <a href={d.url} class="btn btn-primary">
+    <div className="container-fluid">
+      <div className="row">
+      {data.map((d, index) => (
+        <div key={index} className="card col-md-3">
+          <img src={d.urlToImage} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">{d.title}</h5>
+            <p className="card-text">{d.description}</p>
+            <a href={d.url} className="btn btn-primary">
               Go somewhere
             </a>
           </div>
